@@ -445,11 +445,7 @@ function App() {
 
                 <li className="service-item">
                   <div className="service-icon-box">
-                    <img
-                      src="./assets/images/icon-app.svg"
-                      alt="mobile app icon"
-                      width="40"
-                    />
+                    <img src={iconApp} alt="mobile app icon" width="40" />
                   </div>
 
                   <div className="service-content-box">
@@ -464,11 +460,7 @@ function App() {
 
                 <li className="service-item">
                   <div className="service-icon-box">
-                    <img
-                      src="./assets/images/icon-photo.svg"
-                      alt="camera icon"
-                      width="40"
-                    />
+                    <img src={iconPhoto} alt="camera icon" width="40" />
                   </div>
 
                   <div className="service-content-box">
@@ -491,7 +483,7 @@ function App() {
                   <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
                       <img
-                        src="./assets/images/avatar-1.png"
+                        src={avatar1}
                         alt="Daniel lewis"
                         width="60"
                         data-testimonials-avatar
@@ -522,7 +514,7 @@ function App() {
                   <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
                       <img
-                        src="./assets/images/avatar-2.png"
+                        src={avatar2}
                         alt="Jessica miller"
                         width="60"
                         data-testimonials-avatar
@@ -553,7 +545,7 @@ function App() {
                   <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
                       <img
-                        src="./assets/images/avatar-3.png"
+                        src={avatar3}
                         alt="Emily evans"
                         width="60"
                         data-testimonials-avatar
@@ -584,7 +576,7 @@ function App() {
                   <div className="content-card" data-testimonials-item>
                     <figure className="testimonials-avatar-box">
                       <img
-                        src="./assets/images/avatar-4.png"
+                        src={avatar4}
                         alt="Henry william"
                         width="60"
                         data-testimonials-avatar
@@ -624,14 +616,14 @@ function App() {
                 <div className="modal-img-wrapper">
                   <figure className="modal-avatar-box">
                     <img
-                      src="./assets/images/avatar-1.png"
+                      src={avatar1}
                       alt="Daniel lewis"
                       width="80"
                       data-modal-img
                     />
                   </figure>
 
-                  <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+                  <img src={iconQuote} alt="quote icon" />
                 </div>
 
                 <div className="modal-content">
@@ -661,55 +653,37 @@ function App() {
               <ul className="clients-list has-scrollbar">
                 <li className="clients-item">
                   <a href="#">
-                    <img
-                      src="./assets/images/logo-1-color.png"
-                      alt="client logo"
-                    />
+                    <img src={logo1Color} alt="client logo" />
                   </a>
                 </li>
 
                 <li className="clients-item">
                   <a href="#">
-                    <img
-                      src="./assets/images/logo-2-color.png"
-                      alt="client logo"
-                    />
+                    <img src={logo2Color} alt="client logo" />
                   </a>
                 </li>
 
                 <li className="clients-item">
                   <a href="#">
-                    <img
-                      src="./assets/images/logo-3-color.png"
-                      alt="client logo"
-                    />
+                    <img src={logo3Color} alt="client logo" />
                   </a>
                 </li>
 
                 <li className="clients-item">
                   <a href="#">
-                    <img
-                      src="./assets/images/logo-4-color.png"
-                      alt="client logo"
-                    />
+                    <img src={logo4Color} alt="client logo" />
                   </a>
                 </li>
 
                 <li className="clients-item">
                   <a href="#">
-                    <img
-                      src="./assets/images/logo-5-color.png"
-                      alt="client logo"
-                    />
+                    <img src={logo5Color} alt="client logo" />
                   </a>
                 </li>
 
                 <li className="clients-item">
                   <a href="#">
-                    <img
-                      src="./assets/images/logo-6-color.png"
-                      alt="client logo"
-                    />
+                    <img src={logo6Color} alt="client logo" />
                   </a>
                 </li>
               </ul>
@@ -953,11 +927,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-1.jpg"
-                        alt="finance"
-                        loading="lazy"
-                      />
+                      <img src={project1} alt="finance" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Finance</h3>
@@ -977,11 +947,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-2.png"
-                        alt="orizon"
-                        loading="lazy"
-                      />
+                      <img src={project2} alt="orizon" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Orizon</h3>
@@ -1001,11 +967,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-3.jpg"
-                        alt="fundo"
-                        loading="lazy"
-                      />
+                      <img src={project3} alt="fundo" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Fundo</h3>
@@ -1025,11 +987,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-4.png"
-                        alt="brawlhalla"
-                        loading="lazy"
-                      />
+                      <img src={project4} alt="brawlhalla" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Brawlhalla</h3>
@@ -1049,11 +1007,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-5.png"
-                        alt="dsm."
-                        loading="lazy"
-                      />
+                      <img src={project5} alt="dsm." loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">DSM.</h3>
@@ -1097,11 +1051,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-7.png"
-                        alt="summary"
-                        loading="lazy"
-                      />
+                      <img src={project7} alt="summary" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Summary</h3>
@@ -1121,11 +1071,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-8.jpg"
-                        alt="task manager"
-                        loading="lazy"
-                      />
+                      <img src={project8} alt="task manager" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Task Manager</h3>
@@ -1145,11 +1091,7 @@ function App() {
                         <ion-icon name="eye-outline"></ion-icon>
                       </div>
 
-                      <img
-                        src="./assets/images/project-9.png"
-                        alt="arrival"
-                        loading="lazy"
-                      />
+                      <img src={project9} alt="arrival" loading="lazy" />
                     </figure>
 
                     <h3 className="project-title">Arrival</h3>
@@ -1172,7 +1114,7 @@ function App() {
                   <a href="#">
                     <figure className="blog-banner-box">
                       <img
-                        src="./assets/images/blog-1.jpg"
+                        src={blog1}
                         alt="Design conferences in 2022"
                         loading="lazy"
                       />
@@ -1203,7 +1145,7 @@ function App() {
                   <a href="#">
                     <figure className="blog-banner-box">
                       <img
-                        src="./assets/images/blog-2.jpg"
+                        src={blog2}
                         alt="Best fonts every designer"
                         loading="lazy"
                       />
@@ -1233,11 +1175,7 @@ function App() {
                 <li className="blog-post-item">
                   <a href="#">
                     <figure className="blog-banner-box">
-                      <img
-                        src="./assets/images/blog-3.jpg"
-                        alt="Design digest #80"
-                        loading="lazy"
-                      />
+                      <img src={blog3} alt="Design digest #80" loading="lazy" />
                     </figure>
 
                     <div className="blog-content">
@@ -1263,7 +1201,7 @@ function App() {
                   <a href="#">
                     <figure className="blog-banner-box">
                       <img
-                        src="./assets/images/blog-4.jpg"
+                        src={blog4}
                         alt="UI interactions of the week"
                         loading="lazy"
                       />
@@ -1294,7 +1232,7 @@ function App() {
                   <a href="#">
                     <figure className="blog-banner-box">
                       <img
-                        src="./assets/images/blog-5.jpg"
+                        src={blog5}
                         alt="The forgotten art of spacing"
                         loading="lazy/"
                       />
@@ -1324,11 +1262,7 @@ function App() {
                 <li className="blog-post-item">
                   <a href="#">
                     <figure className="blog-banner-box">
-                      <img
-                        src="./assets/images/blog-6.jpg"
-                        alt="Design digest #79"
-                        loading="lazy"
-                      />
+                      <img src={blog6} alt="Design digest #79" loading="lazy" />
                     </figure>
 
                     <div className="blog-content">
