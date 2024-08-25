@@ -7,6 +7,7 @@ const Preloader = () => {
     <div className="preloader">
       <img src={logo} alt="Loading..." className="preloader-image" />
       <h1 className="preloader-text">Raj Hariyani</h1>
+      <p className="preloader-tagline">Creative Director</p>
     </div>
   );
 };
