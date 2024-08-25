@@ -291,7 +291,9 @@ function App() {
               <button className="info_more-btn" data-sidebar-btn>
                 <span>Show Contacts</span>
 
-                <ion-icon name="chevron-down"></ion-icon>
+                <div class="icon-wrapper">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
               </button>
             </div>
 
@@ -300,18 +302,23 @@ function App() {
 
               <ul className="social-list">
                 <li className="social-item">
-                  <a href="#" className="social-link">
+                  <a
+                    href="https://www.facebook.com/RJHARIYANI007?mibextid=LQQJ4d"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="social-link"
+                  >
                     <ion-icon name="logo-facebook"></ion-icon>
                   </a>
                 </li>
-
+                {/* 
                 <li className="social-item">
                   <a href="#" className="social-link">
                     <ion-icon name="logo-twitter"></ion-icon>
                   </a>
-                </li>
+                </li> */}
 
-                <li className="social-item">
+                <li className="social-item" title="Instagram">
                   <a
                     href="https://www.instagram.com/raaaajhariyani?igsh=ZnhmOXlpMzF2MGs4&utm_source=qr"
                     target="_blank"
@@ -347,8 +354,11 @@ function App() {
                   <div className="contact-info">
                     <p className="contact-title">Email</p>
 
-                    <a href="mailto:raj@example.com" className="contact-link">
-                      raj@gmail.com
+                    <a
+                      href="mailto:rajhariyanicreations@gmail.com"
+                      className="contact-link"
+                    >
+                      rajhariyanicreations@gmail.com
                     </a>
                   </div>
                 </li>
@@ -361,7 +371,7 @@ function App() {
                   <div className="contact-info">
                     <p className="contact-title">Birthday</p>
 
-                    <time dateTime="1982-06-23">Jan 1, 2000</time>
+                    <time dateTime="1982-06-23">March 15, 2001</time>
                   </div>
                 </li>
 
@@ -422,8 +432,8 @@ function App() {
 
               <section className="about-text">
                 <p>
-                  I'm Creative Director, Cinematography, Content Creator &
-                  Digital Marketing from Nashik, India.
+                  I'm A Creative Director, Content Creator, Cinematographer &
+                  Digital Marketer from Nashik, India.
                 </p>
 
                 <p>
@@ -503,7 +513,9 @@ function App() {
                     </div>
 
                     <div className="service-content-box">
-                      <h4 className="h4 service-item-title">Photography</h4>
+                      <h4 className="h4 service-item-title">
+                        Videography & cinematography
+                      </h4>
 
                       <p className="service-item-text">
                         I make high-quality photos of any category at a
@@ -702,7 +714,7 @@ function App() {
 
                   <li className="clients-item">
                     <a
-                      href="https://www.instagram.com/pohumalsartjewellery/?hl=en"
+                      href="https://www.instagram.com/pohumaljeweller?igsh=MWJxam50anExaDRlYw=="
                       target="_blank"
                       rel="noreferrer"
                     >
