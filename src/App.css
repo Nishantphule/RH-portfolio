@@ -1912,13 +1912,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 @keyframes rotateAndFade {
-  0% { opacity: 1; transform: translateY(0); }
-  57% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-100vh); } /* Slide up */
+  0% { opacity: 1; transform: translateX(0); }
+  57% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-100vw); }
 }
 
 /* Media Queries for Tablet and Mobile Screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .preloader {
     animation: rotateAndFadeUp 3.5s ease-in-out forwards;
   }
