@@ -7,6 +7,7 @@ import pohumaljeweller from "./assets/images/pohumaljeweller.jpeg";
 import laTerraza from "./assets/images/laTerraza.png";
 import rushabhHonda from "./assets/images/rushabhHonda.png";
 import fitnessLegacy from "./assets/images/fitnessLegacy.jpeg";
+import ather from "./assets/images/ather.png";
 import kardaCons from "./assets/images/kardaCons.jpeg";
 import logo from "./assets/images/my-avatar.png";
 import avatar1 from "./assets/images/avatar-1.png";
@@ -54,15 +55,17 @@ function App() {
 
     return () => clearTimeout(timer); // Cleanup the timer
   }, []);
-
+  const [animate, setAnimate] = useState(true);
   // Sidebar toggle functionality for mobile
   useEffect(() => {
     if (!loading) {
       const sidebar = document.querySelector("[data-sidebar]");
       const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+      const sidebarIcon = document.querySelector("[data-sidebar-icon]");
 
       const handleSidebarToggle = () => {
         sidebar.classList.toggle("active");
+        sidebarIcon.classList.toggle("animate");
       };
 
       sidebarBtn?.addEventListener("click", handleSidebarToggle);
@@ -71,7 +74,7 @@ function App() {
         sidebarBtn?.removeEventListener("click", handleSidebarToggle);
       };
     }
-  }, [loading]);
+  }, [loading, animate]);
 
   // Testimonials modal functionality
   useEffect(() => {
@@ -291,8 +294,8 @@ function App() {
               <button className="info_more-btn" data-sidebar-btn>
                 <span>Show Contacts</span>
 
-                <div class="icon-wrapper">
-                  <ion-icon name="chevron-down"></ion-icon>
+                <div className="icon-wrapper animate" data-sidebar-icon>
+                  <ion-icon name="camera-sharp"></ion-icon>
                 </div>
               </button>
             </div>
@@ -342,6 +345,9 @@ function App() {
 
                     <a href="tel:+919158348177" className="contact-link">
                       +91 9158348177
+                    </a>
+                    <a href="tel:+919158348133" className="contact-link">
+                      +91 9158348133
                     </a>
                   </div>
                 </li>
@@ -411,11 +417,11 @@ function App() {
                   </button>
                 </li>
 
-                <li className="navbar-item">
+                {/* <li className="navbar-item">
                   <button className="navbar-link" data-nav-link>
                     Blog
                   </button>
-                </li>
+                </li> */}
 
                 <li className="navbar-item">
                   <button className="navbar-link" data-nav-link>
@@ -518,8 +524,7 @@ function App() {
                       </h4>
 
                       <p className="service-item-text">
-                        I make high-quality photos of any category at a
-                        professional level.
+                        Can Visualize the scenarios into amazing videos.
                       </p>
                     </div>
                   </li>
@@ -545,7 +550,7 @@ function App() {
                         className="h4 testimonials-item-title"
                         data-testimonials-title
                       >
-                        Daniel lewis
+                        Viren punjawani, <br /> <small>Pohumal Jewellers</small>
                       </h4>
 
                       <div className="testimonials-text" data-testimonials-text>
@@ -566,7 +571,7 @@ function App() {
                       <figure className="testimonials-avatar-box">
                         <img
                           src={avatar2}
-                          alt="Jessica miller"
+                          alt="Devesh Karda"
                           width="60"
                           data-testimonials-avatar
                         />
@@ -576,7 +581,7 @@ function App() {
                         className="h4 testimonials-item-title"
                         data-testimonials-title
                       >
-                        Jessica miller
+                        Devesh Karda, <br /> <small>Karda</small>
                       </h4>
 
                       <div className="testimonials-text" data-testimonials-text>
@@ -597,7 +602,7 @@ function App() {
                       <figure className="testimonials-avatar-box">
                         <img
                           src={avatar3}
-                          alt="Emily evans"
+                          alt="Parikshit shauche"
                           width="60"
                           data-testimonials-avatar
                         />
@@ -607,7 +612,40 @@ function App() {
                         className="h4 testimonials-item-title"
                         data-testimonials-title
                       >
-                        Emily evans
+                        Parikshit shauche, <br />
+                        <small>Courtyard marriot</small>
+                      </h4>
+
+                      <div className="testimonials-text" data-testimonials-text>
+                        <p>
+                          Raj was hired to create a corporate identity. We were
+                          very pleased with the work done. She has a lot of
+                          experience and is very concerned about the needs of
+                          client. Lorem ipsum dolor sit amet, ullamcous cididt
+                          consectetur adipiscing elit, seds do et eiusmod tempor
+                          incididunt ut laborels dolore magnarels alia.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li className="testimonials-item">
+                    <div className="content-card" data-testimonials-item>
+                      <figure className="testimonials-avatar-box">
+                        <img
+                          src={avatar3}
+                          alt="Habib Sayyed"
+                          width="60"
+                          data-testimonials-avatar
+                        />
+                      </figure>
+
+                      <h4
+                        className="h4 testimonials-item-title"
+                        data-testimonials-title
+                      >
+                        Habib Sayyed, <br />
+                        <small>Fitness Legacy</small>
                       </h4>
 
                       <div className="testimonials-text" data-testimonials-text>
@@ -628,7 +666,7 @@ function App() {
                       <figure className="testimonials-avatar-box">
                         <img
                           src={avatar4}
-                          alt="Henry william"
+                          alt="Bhavesh jain"
                           width="60"
                           data-testimonials-avatar
                         />
@@ -638,7 +676,7 @@ function App() {
                         className="h4 testimonials-item-title"
                         data-testimonials-title
                       >
-                        Henry william
+                        Bhavesh jain, <br /> <small>Rushab honda</small>
                       </h4>
 
                       <div className="testimonials-text" data-testimonials-text>
@@ -709,6 +747,16 @@ function App() {
                       rel="noreferrer"
                     >
                       <img src={courtyardNashik} alt="client logo" />
+                    </a>
+                  </li>
+
+                  <li className="clients-item">
+                    <a
+                      href="https://www.instagram.com/ather_nashik/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img src={ather} alt="client logo" />
                     </a>
                   </li>
 
@@ -950,15 +998,21 @@ function App() {
                   </li>
 
                   <li className="filter-item">
-                    <button data-filter-btn>Web design</button>
+                    <button data-filter-btn>Design</button>
                   </li>
 
                   <li className="filter-item">
-                    <button data-filter-btn>Applications</button>
+                    <button data-filter-btn>Content Writing</button>
                   </li>
 
                   <li className="filter-item">
-                    <button data-filter-btn>Web development</button>
+                    <button data-filter-btn>Content Creation</button>
+                  </li>
+
+                  <li className="filter-item">
+                    <button data-filter-btn>
+                      Photography and Cinematographer
+                    </button>
                   </li>
                 </ul>
 
