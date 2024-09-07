@@ -123,95 +123,87 @@ function App() {
     }
   }, [loading]);
 
+  // Common toggle functionality
+  const elementToggleFunc = (elem) => {
+    elem.classList.toggle("active");
+  };
+
+  // Filtering items based on selection
+  const filterFunc = (selectedValue, filterItems) => {
+    filterItems.forEach((item) => {
+      if (selectedValue === "all") {
+        item.classList.add("active");
+      } else if (selectedValue === item.dataset.category) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  };
+
   // Custom select and filtering functionality
   useEffect(() => {
     if (!loading) {
-      const select = document.querySelector("[data-select]");
+      const select = selectRef.current;
       const selectItems = document.querySelectorAll("[data-select-item]");
       const selectValue = document.querySelector("[data-select-value]");
       const filterBtn = document.querySelectorAll("[data-filter-btn]");
       const filterItems = document.querySelectorAll("[data-filter-item]");
 
-      const elementToggleFunc = function (elem) {
-        elem.classList.toggle("active");
+      const handleSelectClick = () => elementToggleFunc(select);
+
+      const handleSelectItemClick = function () {
+        const selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        elementToggleFunc(select);
+        filterFunc(selectedValue, filterItems);
       };
 
-      const filterFunc = (selectedValue) => {
-        filterItems.forEach((item) => {
-          if (selectedValue === "all") {
-            item.classList.add("active");
-          } else if (selectedValue === item.dataset.category) {
-            item.classList.add("active");
-          } else {
-            item.classList.remove("active");
-          }
-        });
+      const handleFilterBtnClick = function () {
+        const selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        filterFunc(selectedValue, filterItems);
+        lastClickedBtn.classList.remove("active");
+        this.classList.add("active");
+        lastClickedBtn = this;
       };
 
-      select?.addEventListener("click", () => elementToggleFunc(select));
-
+      // Attach event listeners
+      select?.addEventListener("click", handleSelectClick);
       selectItems?.forEach((item) => {
-        item.addEventListener("click", function () {
-          let selectedValue = this.innerText.toLowerCase();
-          selectValue.innerText = this.innerText;
-          elementToggleFunc(select);
-          filterFunc(selectedValue);
-        });
+        item.addEventListener("click", handleSelectItemClick);
       });
 
       let lastClickedBtn = filterBtn[0];
-
       filterBtn?.forEach((btn) => {
-        btn.addEventListener("click", function () {
-          let selectedValue = this.innerText.toLowerCase();
-          selectValue.innerText = this.innerText;
-          filterFunc(selectedValue);
-          lastClickedBtn.classList.remove("active");
-          this.classList.add("active");
-          lastClickedBtn = this;
-        });
+        btn.addEventListener("click", handleFilterBtnClick);
       });
 
+      // Cleanup event listeners on component unmount
       return () => {
-        select?.removeEventListener("click", elementToggleFunc);
-        selectItems?.forEach((item) =>
-          item.removeEventListener("click", elementToggleFunc)
-        );
-        filterBtn?.forEach((btn) =>
-          btn.removeEventListener("click", filterFunc)
-        );
+        select?.removeEventListener("click", handleSelectClick);
+        selectItems?.forEach((item) => {
+          item.removeEventListener("click", handleSelectItemClick);
+        });
+        filterBtn?.forEach((btn) => {
+          btn.removeEventListener("click", handleFilterBtnClick);
+        });
       };
     }
   }, [loading]);
   const selectRef = useRef(null);
-  // Select toggle functionality
+  // Handle body click for closing the select dropdown
   useEffect(() => {
     if (!loading) {
-      const elementToggleFunc = (elem) => {
-        elem.classList.toggle("active");
-      };
-
-      const handleSelectClick = () => {
-        elementToggleFunc(selectRef.current);
-      };
-
       const handleBodyClick = (event) => {
         if (selectRef.current && !selectRef.current.contains(event.target)) {
-          // If the click is outside the select element, remove the "active" class
           selectRef.current.classList.remove("active");
         }
       };
 
-      // Add event listener to the select element
-      const selectElement = selectRef.current;
-      selectElement.addEventListener("click", handleSelectClick);
-
-      // Add event listener to the body to detect clicks outside the select element
       document.body.addEventListener("click", handleBodyClick);
 
-      // Cleanup listeners on component unmount or re-render
       return () => {
-        selectElement.removeEventListener("click", handleSelectClick);
         document.body.removeEventListener("click", handleBodyClick);
       };
     }
@@ -417,17 +409,23 @@ function App() {
                   </button>
                 </li>
 
+                <li className="navbar-item">
+                  <button className="navbar-link" data-nav-link>
+                    Clients
+                  </button>
+                </li>
+
                 {/* <li className="navbar-item">
                   <button className="navbar-link" data-nav-link>
                     Blog
                   </button>
                 </li> */}
 
-                <li className="navbar-item">
+                {/* <li className="navbar-item">
                   <button className="navbar-link" data-nav-link>
                     Contact
                   </button>
-                </li>
+                </li> */}
               </ul>
             </nav>
 
@@ -691,6 +689,37 @@ function App() {
                       </div>
                     </div>
                   </li>
+
+                  <li className="testimonials-item">
+                    <div className="content-card" data-testimonials-item>
+                      <figure className="testimonials-avatar-box">
+                        <img
+                          src={avatar4}
+                          alt="Kishor dusane"
+                          width="60"
+                          data-testimonials-avatar
+                        />
+                      </figure>
+
+                      <h4
+                        className="h4 testimonials-item-title"
+                        data-testimonials-title
+                      >
+                        Kishor dusane, <br /> <small>archit group</small>
+                      </h4>
+
+                      <div className="testimonials-text" data-testimonials-text>
+                        <p>
+                          Raj was hired to create a corporate identity. We were
+                          very pleased with the work done. She has a lot of
+                          experience and is very concerned about the needs of
+                          client. Lorem ipsum dolor sit amet, ullamcous cididt
+                          consectetur adipiscing elit, seds do et eiusmod tempor
+                          incididunt ut laborels dolore magnarels alia.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </section>
 
@@ -737,7 +766,7 @@ function App() {
               </div>
 
               <section className="clients">
-                <h3 className="h3 clients-title">Clients</h3>
+                <h3 className="h3 clients-title">Top Clients</h3>
 
                 <ul className="clients-list has-scrollbar">
                   <li className="clients-item">
@@ -1033,15 +1062,21 @@ function App() {
                     </li>
 
                     <li className="select-item">
-                      <button data-select-item>Web design</button>
+                      <button data-select-item>Design</button>
                     </li>
 
                     <li className="select-item">
-                      <button data-select-item>Applications</button>
+                      <button data-select-item>Content Creation</button>
                     </li>
 
                     <li className="select-item">
-                      <button data-select-item>Web development</button>
+                      <button data-select-item>Content Writing</button>
+                    </li>
+
+                    <li className="select-item">
+                      <button data-select-item>
+                        Photography and Cinematographer
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -1050,9 +1085,13 @@ function App() {
                   <li
                     className="project-item  active"
                     data-filter-item
-                    data-category="web development"
+                    data-category="content creation"
                   >
-                    <a href="#">
+                    <a
+                      href="https://www.google.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <figure className="project-img">
                         <div className="project-item-icon-box">
                           <ion-icon name="eye-outline"></ion-icon>
@@ -1063,7 +1102,7 @@ function App() {
 
                       <h3 className="project-title">Finance</h3>
 
-                      <p className="project-category">Web development</p>
+                      <p className="project-category">Content Creation</p>
                     </a>
                   </li>
 
@@ -1090,7 +1129,7 @@ function App() {
                   <li
                     className="project-item  active"
                     data-filter-item
-                    data-category="web design"
+                    data-category="design"
                   >
                     <a href="#">
                       <figure className="project-img">
@@ -1103,7 +1142,7 @@ function App() {
 
                       <h3 className="project-title">Fundo</h3>
 
-                      <p className="project-category">Web design</p>
+                      <p className="project-category">Design</p>
                     </a>
                   </li>
 
@@ -1224,6 +1263,202 @@ function App() {
                       <h3 className="project-title">Arrival</h3>
 
                       <p className="project-category">Web development</p>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+            </article>
+
+            <article className="blog" data-page="clients">
+              <header>
+                <h2 className="h2 article-title">Clients</h2>
+              </header>
+
+              <section className="blog-posts">
+                <ul className="blog-posts-list">
+                  <li className="blog-post-item">
+                    <a href="#">
+                      <figure className="blog-banner-box">
+                        <img
+                          src={blog1}
+                          alt="Design conferences in 2022"
+                          loading="lazy"
+                        />
+                      </figure>
+
+                      <div className="blog-content">
+                        <div className="blog-meta">
+                          <p className="blog-category">Design</p>
+
+                          <span className="dot"></span>
+
+                          <time dateTime="2022-02-23">Fab 23, 2022</time>
+                        </div>
+
+                        <h3 className="h3 blog-item-title">
+                          Design conferences in 2022
+                        </h3>
+
+                        <p className="blog-text">
+                          Veritatis et quasi architecto beatae vitae dicta sunt,
+                          explicabo.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li className="blog-post-item">
+                    <a href="#">
+                      <figure className="blog-banner-box">
+                        <img
+                          src={blog2}
+                          alt="Best fonts every designer"
+                          loading="lazy"
+                        />
+                      </figure>
+
+                      <div className="blog-content">
+                        <div className="blog-meta">
+                          <p className="blog-category">Design</p>
+
+                          <span className="dot"></span>
+
+                          <time dateTime="2022-02-23">Fab 23, 2022</time>
+                        </div>
+
+                        <h3 className="h3 blog-item-title">
+                          Best fonts every designer
+                        </h3>
+
+                        <p className="blog-text">
+                          Sed ut perspiciatis, nam libero tempore, cum soluta
+                          nobis est eligendi.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li className="blog-post-item">
+                    <a href="#">
+                      <figure className="blog-banner-box">
+                        <img
+                          src={blog3}
+                          alt="Design digest #80"
+                          loading="lazy"
+                        />
+                      </figure>
+
+                      <div className="blog-content">
+                        <div className="blog-meta">
+                          <p className="blog-category">Design</p>
+
+                          <span className="dot"></span>
+
+                          <time dateTime="2022-02-23">Fab 23, 2022</time>
+                        </div>
+
+                        <h3 className="h3 blog-item-title">
+                          Design digest #80
+                        </h3>
+
+                        <p className="blog-text">
+                          Excepteur sint occaecat cupidatat no proident, quis
+                          nostrum exercitationem ullam corporis suscipit.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li className="blog-post-item">
+                    <a href="#">
+                      <figure className="blog-banner-box">
+                        <img
+                          src={blog4}
+                          alt="UI interactions of the week"
+                          loading="lazy"
+                        />
+                      </figure>
+
+                      <div className="blog-content">
+                        <div className="blog-meta">
+                          <p className="blog-category">Design</p>
+
+                          <span className="dot"></span>
+
+                          <time dateTime="2022-02-23">Fab 23, 2022</time>
+                        </div>
+
+                        <h3 className="h3 blog-item-title">
+                          UI interactions of the week
+                        </h3>
+
+                        <p className="blog-text">
+                          Enim ad minim veniam, consectetur adipiscing elit,
+                          quis nostrud exercitation ullamco laboris nisi.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li className="blog-post-item">
+                    <a href="#">
+                      <figure className="blog-banner-box">
+                        <img
+                          src={blog5}
+                          alt="The forgotten art of spacing"
+                          loading="lazy/"
+                        />
+                      </figure>
+
+                      <div className="blog-content">
+                        <div className="blog-meta">
+                          <p className="blog-category">Design</p>
+
+                          <span className="dot"></span>
+
+                          <time dateTime="2022-02-23">Fab 23, 2022</time>
+                        </div>
+
+                        <h3 className="h3 blog-item-title">
+                          The forgotten art of spacing
+                        </h3>
+
+                        <p className="blog-text">
+                          Maxime placeat, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li className="blog-post-item">
+                    <a href="#">
+                      <figure className="blog-banner-box">
+                        <img
+                          src={blog6}
+                          alt="Design digest #79"
+                          loading="lazy"
+                        />
+                      </figure>
+
+                      <div className="blog-content">
+                        <div className="blog-meta">
+                          <p className="blog-category">Design</p>
+
+                          <span className="dot"></span>
+
+                          <time dateTime="2022-02-23">Fab 23, 2022</time>
+                        </div>
+
+                        <h3 className="h3 blog-item-title">
+                          Design digest #79
+                        </h3>
+
+                        <p className="blog-text">
+                          Optio cumque nihil impedit uo minus quod maxime
+                          placeat, velit esse cillum.
+                        </p>
+                      </div>
                     </a>
                   </li>
                 </ul>
