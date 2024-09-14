@@ -98,21 +98,6 @@ const AboutMe = ({ loading }) => {
         <ul className="service-list">
           <li className="service-item">
             <div className="service-icon-box">
-              <img src={iconDesign} alt="design icon" width="40" />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Design</h4>
-
-              <p className="service-item-text">
-                The most modern and high-quality design made at a professional
-                level.
-              </p>
-            </div>
-          </li>
-
-          <li className="service-item">
-            <div className="service-icon-box">
               <img src={iconDev} alt="Web development icon" width="40" />
             </div>
 
@@ -152,6 +137,21 @@ const AboutMe = ({ loading }) => {
               </p>
             </div>
           </li>
+
+          <li className="service-item">
+            <div className="service-icon-box">
+              <img src={iconDesign} alt="design icon" width="40" />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">Design</h4>
+
+              <p className="service-item-text">
+                The most modern and high-quality design made at a professional
+                level.
+              </p>
+            </div>
+          </li>
         </ul>
       </section>
 
@@ -179,12 +179,13 @@ const AboutMe = ({ loading }) => {
 
               <div className="testimonials-text" data-testimonials-text>
                 <p>
-                  Raj was hired to create a corporate identity. We were very
-                  pleased with the work done. She has a lot of experience and is
-                  very concerned about the needs of client. Lorem ipsum dolor
-                  sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                  do et eiusmod tempor incididunt ut laborels dolore magnarels
-                  alia.
+                  Working with Raj for our video content creation has been a
+                  remarkable experience. His creativity, attention to detail,
+                  and ability to visually showcase our jewelry collections
+                  exceeded our expectations. The videos beautifully captured the
+                  essence of our brand, and we received great feedback from our
+                  customers. We look forward to collaborating with him again for
+                  future projects.
                 </p>
               </div>
             </div>
@@ -210,12 +211,15 @@ const AboutMe = ({ loading }) => {
 
               <div className="testimonials-text" data-testimonials-text>
                 <p>
-                  Raj was hired to create a corporate identity. We were very
-                  pleased with the work done. She has a lot of experience and is
-                  very concerned about the needs of client. Lorem ipsum dolor
-                  sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                  do et eiusmod tempor incididunt ut laborels dolore magnarels
-                  alia.
+                  Collaborating with Raj for our real estate video content was
+                  an excellent decision. His creativity and understanding of how
+                  to showcase our properties in the best light have
+                  significantly enhanced our brand presence. The videos not only
+                  captured the essence of our projects but also played a key
+                  role in increasing our brand awareness and reaching a wider
+                  audience. His work helped us connect with potential buyers
+                  more effectively, and we truly appreciate his professionalism.
+                  We look forward to future collaborations.
                 </p>
               </div>
             </div>
@@ -242,12 +246,14 @@ const AboutMe = ({ loading }) => {
 
               <div className="testimonials-text" data-testimonials-text>
                 <p>
-                  Raj was hired to create a corporate identity. We were very
-                  pleased with the work done. She has a lot of experience and is
-                  very concerned about the needs of client. Lorem ipsum dolor
-                  sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                  do et eiusmod tempor incididunt ut laborels dolore magnarels
-                  alia.
+                  Partnering with Raj for our video content creation was an
+                  excellent experience. His creativity and ability to highlight
+                  the unique features of our hotel helped elevate our brand
+                  presence. The videos not only showcased the elegance and
+                  comfort of our property but also contributed significantly to
+                  enhancing brand awareness. Through his work, we were able to
+                  engage more effectively with our target audience. We look
+                  forward to continuing our collaboration in the future.
                 </p>
               </div>
             </div>
@@ -274,12 +280,15 @@ const AboutMe = ({ loading }) => {
 
               <div className="testimonials-text" data-testimonials-text>
                 <p>
-                  Raj was hired to create a corporate identity. We were very
-                  pleased with the work done. She has a lot of experience and is
-                  very concerned about the needs of client. Lorem ipsum dolor
-                  sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                  do et eiusmod tempor incididunt ut laborels dolore magnarels
-                  alia.
+                  Collaborating with Raj has been an incredible journey,
+                  especially with the biopic he created that beautifully
+                  captured my life story—from a small-town boy to achieving Mr.
+                  Universe and now working towards Mr. Olympia. His creativity,
+                  attention to detail, and ability to tell such a personal story
+                  through film have significantly elevated our brand awareness.
+                  The gym’s video content, along with the biopic, has inspired
+                  both our members and a broader audience. We truly value his
+                  work and look forward to more collaborations in the future.
                 </p>
               </div>
             </div>
@@ -305,12 +314,14 @@ const AboutMe = ({ loading }) => {
 
               <div className="testimonials-text" data-testimonials-text>
                 <p>
-                  Raj was hired to create a corporate identity. We were very
-                  pleased with the work done. She has a lot of experience and is
-                  very concerned about the needs of client. Lorem ipsum dolor
-                  sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                  do et eiusmod tempor incididunt ut laborels dolore magnarels
-                  alia.
+                  Collaborating with Raj for the cinematography and commercial
+                  video shoot of our 2024 new batch lot of vehicles was a
+                  fantastic experience. His creative vision and skillful
+                  execution effectively showcased the features and quality of
+                  our entire lineup. The videos have significantly bolstered our
+                  brand presence and engaged our target audience. We are
+                  grateful for his professionalism and look forward to working
+                  together on future projects.
                 </p>
               </div>
             </div>
@@ -336,12 +347,46 @@ const AboutMe = ({ loading }) => {
 
               <div className="testimonials-text" data-testimonials-text>
                 <p>
-                  Raj was hired to create a corporate identity. We were very
-                  pleased with the work done. She has a lot of experience and is
-                  very concerned about the needs of client. Lorem ipsum dolor
-                  sit amet, ullamcous cididt consectetur adipiscing elit, seds
-                  do et eiusmod tempor incididunt ut laborels dolore magnarels
-                  alia.
+                  Working with Raj on the informative video content for our
+                  newly launched properties has been a highly positive
+                  experience. His ability to effectively convey the key features
+                  and benefits of our properties through engaging and
+                  informative videos has greatly enhanced our marketing efforts.
+                  The content has been instrumental in informing potential
+                  buyers and boosting our brand visibility. We appreciate his
+                  dedication and look forward to future collaborations.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li className="testimonials-item">
+            <div className="content-card" data-testimonials-item>
+              <figure className="testimonials-avatar-box">
+                <img
+                  src={avatar4}
+                  alt="Jay Patwa"
+                  width="60"
+                  data-testimonials-avatar
+                />
+              </figure>
+
+              <h4
+                className="h4 testimonials-item-title"
+                data-testimonials-title
+              >
+                Jay Patwa, <br /> <small>Ather</small>
+              </h4>
+
+              <div className="testimonials-text" data-testimonials-text>
+                <p>
+                  Working with Raj on a project for our electric scooters was a
+                  fantastic experience. His innovative ideas and attention to
+                  detail brought a fresh perspective to our creative content.
+                  His contribution significantly enhanced our project's impact
+                  and helped us showcase our brand effectively. We appreciate
+                  his work and look forward to the possibility of collaborating
+                  on future projects.
                 </p>
               </div>
             </div>
@@ -421,16 +466,6 @@ const AboutMe = ({ loading }) => {
 
           <li className="clients-item">
             <a
-              href="https://www.instagram.com/la_terraza_thecafebar/?hl=en"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={laTerraza} alt="client logo" />
-            </a>
-          </li>
-
-          <li className="clients-item">
-            <a
               href="https://www.rushabh2w.com/"
               target="_blank"
               rel="noreferrer"
@@ -456,6 +491,16 @@ const AboutMe = ({ loading }) => {
               rel="noreferrer"
             >
               <img src={kardaCons} alt="client logo" />
+            </a>
+          </li>
+
+          <li className="clients-item">
+            <a
+              href="https://www.instagram.com/la_terraza_thecafebar/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={laTerraza} alt="client logo" />
             </a>
           </li>
         </ul>

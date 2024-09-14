@@ -108,21 +108,15 @@ const Portfolio = ({ loading }) => {
               All
             </button>
           </li>
+          <li className="filter-item">
+            <button data-filter-btn>Contents & Cinematics</button>
+          </li>
 
+          <li className="filter-item">
+            <button data-filter-btn>Content Writing & Creation</button>
+          </li>
           <li className="filter-item">
             <button data-filter-btn>Design</button>
-          </li>
-
-          <li className="filter-item">
-            <button data-filter-btn>Content Writing</button>
-          </li>
-
-          <li className="filter-item">
-            <button data-filter-btn>Content Creation</button>
-          </li>
-
-          <li className="filter-item">
-            <button data-filter-btn>Photography and Cinematographer</button>
           </li>
         </ul>
 
