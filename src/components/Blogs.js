@@ -1,10 +1,10 @@
 import React from "react";
-import blog1 from "./assets/images/blog-1.jpg";
-import blog2 from "./assets/images/blog-2.jpg";
-import blog3 from "./assets/images/blog-3.jpg";
-import blog4 from "./assets/images/blog-4.jpg";
-import blog5 from "./assets/images/blog-5.jpg";
-import blog6 from "./assets/images/blog-6.jpg";
+import blog1 from "../assets/images/blog-1.jpg";
+import blog2 from "../assets/images/blog-2.jpg";
+import blog3 from "../assets/images/blog-3.jpg";
+import blog4 from "../assets/images/blog-4.jpg";
+import blog5 from "../assets/images/blog-5.jpg";
+import blog6 from "../assets/images/blog-6.jpg";
 
 const Blogs = () => {
   return (

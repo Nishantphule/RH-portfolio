@@ -1,0 +1,77 @@
+{
+    "images": [
+      {
+        "src": "../assets/images/Food/IMG_2102.HEIC",
+        "alt": "Food Photography 1",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2107.HEIC",
+        "alt": "Food Photography 2",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2182.HEIC",
+        "alt": "Food Photography 3",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2203.HEIC",
+        "alt": "Food Photography 4",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2453.HEIC",
+        "alt": "Food Photography 5",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2456.HEIC",
+        "alt": "Food Photography 6",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2474.HEIC",
+        "alt": "Food Photography 7",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2626.HEIC",
+        "alt": "Food Photography 8",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2627.HEIC",
+        "alt": "Food Photography 9",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2772.HEIC",
+        "alt": "Food Photography 10",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2778.HEIC",
+        "alt": "Food Photography 11",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      },
+      {
+        "src": "../assets/images/Food/IMG_2780.HEIC",
+        "alt": "Food Photography 12",
+        "category": "Food Photography",
+        "link": "https://www.google.com"
+      }
+    ]
+  }
+  

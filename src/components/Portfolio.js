@@ -1,13 +1,28 @@
 import React, { useEffect, useRef } from "react";
-import project1 from "../assets/images/project-1.jpg";
-import project2 from "../assets/images/project-2.png";
-import project3 from "../assets/images/project-3.jpg";
-import project4 from "../assets/images/project-4.png";
-import project5 from "../assets/images/project-5.png";
-import project6 from "../assets/images/project-6.png";
-import project7 from "../assets/images/project-7.png";
-import project8 from "../assets/images/project-8.jpg";
-import project9 from "../assets/images/project-9.png";
+
+import advLogo from "../assets/images/Designs/adv.jpg";
+import dishaLogo from "../assets/images/Designs/disha.jpg";
+import dmoraLogo from "../assets/images/Designs/dmora.jpg";
+import fabricLogo from "../assets/images/Designs/fabric.jpg";
+import gogreenLogo from "../assets/images/Designs/gogreen.JPG";
+
+import muhuratLogo from "../assets/images/Designs/muhurat.PNG";
+import rhsolutionsLogo from "../assets/images/Designs/rhsolutions.jpg";
+import vrmLogo from "../assets/images/Designs/vrm.jpg";
+import vrmediaLogo from "../assets/images/Designs/vrmedia.JPG";
+
+import img2102 from "../assets/images/Food/IMG_2102.HEIC";
+import img2107 from "../assets/images/Food/IMG_2107.HEIC";
+import img2182 from "../assets/images/Food/IMG_2182.HEIC";
+import img2203 from "../assets/images/Food/IMG_2203.HEIC";
+import img2453 from "../assets/images/Food/IMG_2453.HEIC";
+import img2456 from "../assets/images/Food/IMG_2456.HEIC";
+import img2474 from "../assets/images/Food/IMG_2474.HEIC";
+import img2626 from "../assets/images/Food/IMG_2626.HEIC";
+import img2627 from "../assets/images/Food/IMG_2627.HEIC";
+import img2772 from "../assets/images/Food/IMG_2772.HEIC";
+import img2778 from "../assets/images/Food/IMG_2778.HEIC";
+import img2780 from "../assets/images/Food/IMG_2780.HEIC";
 
 const Portfolio = ({ loading }) => {
   // Common toggle functionality
@@ -118,6 +133,10 @@ const Portfolio = ({ loading }) => {
           <li className="filter-item">
             <button data-filter-btn>Design</button>
           </li>
+
+          <li className="filter-item">
+            <button data-filter-btn>Food Photography</button>
+          </li>
         </ul>
 
         <div className="filter-select-box">
@@ -137,19 +156,19 @@ const Portfolio = ({ loading }) => {
             </li>
 
             <li className="select-item">
+              <button data-select-item>Contents & Cinematics</button>
+            </li>
+
+            <li className="select-item">
+              <button data-select-item>Content Writing & Creation</button>
+            </li>
+
+            <li className="select-item">
               <button data-select-item>Design</button>
             </li>
 
             <li className="select-item">
-              <button data-select-item>Content Creation</button>
-            </li>
-
-            <li className="select-item">
-              <button data-select-item>Content Writing</button>
-            </li>
-
-            <li className="select-item">
-              <button data-select-item>Photography and Cinematographer</button>
+              <button data-select-item>Food Photography</button>
             </li>
           </ul>
         </div>
@@ -158,58 +177,18 @@ const Portfolio = ({ loading }) => {
           <li
             className="project-item  active"
             data-filter-item
-            data-category="content creation"
-          >
-            <a href="https://www.google.com" target="_blank" rel="noreferrer">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </div>
-
-                <img src={project1} alt="finance" loading="lazy" />
-              </figure>
-
-              <h3 className="project-title">Finance</h3>
-
-              <p className="project-category">Content Creation</p>
-            </a>
-          </li>
-
-          <li
-            className="project-item  active"
-            data-filter-item
-            data-category="web development"
-          >
-            <a href="#">
-              <figure className="project-img">
-                <div className="project-item-icon-box">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </div>
-
-                <img src={project2} alt="orizon" loading="lazy" />
-              </figure>
-
-              <h3 className="project-title">Orizon</h3>
-
-              <p className="project-category">Web development</p>
-            </a>
-          </li>
-
-          <li
-            className="project-item  active"
-            data-filter-item
             data-category="design"
           >
-            <a href="#">
+            <a href={advLogo} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project3} alt="fundo" loading="lazy" />
+                <img src={advLogo} alt="design" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">Fundo</h3>
+              <h3 className="project-title">Hair and beauty academy</h3>
 
               <p className="project-category">Design</p>
             </a>
@@ -218,120 +197,385 @@ const Portfolio = ({ loading }) => {
           <li
             className="project-item  active"
             data-filter-item
-            data-category="applications"
+            data-category="design"
           >
-            <a href="#">
+            <a href={dishaLogo} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project4} alt="brawlhalla" loading="lazy" />
+                <img src={dishaLogo} alt="design" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">Brawlhalla</h3>
+              <h3 className="project-title">Disha Kitchen Delights</h3>
 
-              <p className="project-category">Applications</p>
+              <p className="project-category">Design</p>
             </a>
           </li>
 
           <li
             className="project-item  active"
             data-filter-item
-            data-category="web design"
+            data-category="design"
           >
-            <a href="#">
+            <a href={dmoraLogo} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project5} alt="dsm." loading="lazy" />
+                <img src={dmoraLogo} alt="design" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">DSM.</h3>
+              <h3 className="project-title">D'mora Cafe</h3>
 
-              <p className="project-category">Web design</p>
+              <p className="project-category">Design</p>
             </a>
           </li>
 
           <li
             className="project-item  active"
             data-filter-item
-            data-category="web design"
+            data-category="design"
           >
-            <a href="#">
+            <a href={fabricLogo} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project6} alt="metaspark" loading="lazy" />
+                <img src={fabricLogo} alt="design" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">MetaSpark</h3>
+              <h3 className="project-title">fabric Lab</h3>
 
-              <p className="project-category">Web design</p>
+              <p className="project-category">Design</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="design"
+          >
+            <a href={gogreenLogo} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={gogreenLogo} alt="design" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">go Green</h3>
+
+              <p className="project-category">Design</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="design"
+          >
+            <a href={muhuratLogo} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={muhuratLogo} alt="design" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">Muhurat</h3>
+
+              <p className="project-category">Design</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="design"
+          >
+            <a href={rhsolutionsLogo} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={rhsolutionsLogo} alt="design" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">R H solutions</h3>
+
+              <p className="project-category">Design</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="design"
+          >
+            <a href={vrmLogo} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={vrmLogo} alt="design" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">V R Media</h3>
+
+              <p className="project-category">Design</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="design"
+          >
+            <a href={vrmediaLogo} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={vrmediaLogo} alt="design" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">V R Media</h3>
+
+              <p className="project-category">Design</p>
             </a>
           </li>
 
           <li
             className="project-item  active"
             data-filter-item
-            data-category="web development"
+            data-category="food photography"
           >
-            <a href="#">
+            <a href={img2102} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project7} alt="summary" loading="lazy" />
+                <img src={img2102} alt="food photography" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">Summary</h3>
+              {/* <h3 className="project-title"></h3> */}
 
-              <p className="project-category">Web development</p>
+              <p className="project-category">Food Photography</p>
             </a>
           </li>
 
           <li
             className="project-item  active"
             data-filter-item
-            data-category="applications"
+            data-category="food photography"
           >
-            <a href="#">
+            <a href={img2107} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project8} alt="task manager" loading="lazy" />
+                <img src={img2107} alt="food photography" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">Task Manager</h3>
+              {/* <h3 className="project-title"></h3> */}
 
-              <p className="project-category">Applications</p>
+              <p className="project-category">Food Photography</p>
             </a>
           </li>
-
           <li
             className="project-item  active"
             data-filter-item
-            data-category="web development"
+            data-category="food photography"
           >
-            <a href="#">
+            <a href={img2182} target="_blank" rel="noreferrer">
               <figure className="project-img">
                 <div className="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src={project9} alt="arrival" loading="lazy" />
+                <img src={img2182} alt="food photography" loading="lazy" />
               </figure>
 
-              <h3 className="project-title">Arrival</h3>
+              {/* <h3 className="project-title"></h3> */}
 
-              <p className="project-category">Web development</p>
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2203} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2203} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2453} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2453} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2456} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2456} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2474} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2474} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2626} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2626} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2627} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2627} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2772} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2772} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2778} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2778} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="food photography"
+          >
+            <a href={img2780} target="_blank" rel="noreferrer">
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={img2780} alt="food photography" loading="lazy" />
+              </figure>
+
+              {/* <h3 className="project-title"></h3> */}
+
+              <p className="project-category">Food Photography</p>
             </a>
           </li>
         </ul>
