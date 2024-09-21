@@ -7,11 +7,11 @@ const SideBar = ({ loading }) => {
     if (!loading) {
       const sidebar = document.querySelector("[data-sidebar]");
       const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-      const sidebarIcon = document.querySelector("[data-sidebar-icon]");
+      // const sidebarIcon = document.querySelector("[data-sidebar-icon]");
 
       const handleSidebarToggle = () => {
         sidebar.classList.toggle("active");
-        sidebarIcon.classList.toggle("animate");
+        // sidebarIcon.classList.toggle("animate");
       };
 
       sidebarBtn?.addEventListener("click", handleSidebarToggle);
@@ -40,8 +40,8 @@ const SideBar = ({ loading }) => {
         <button className="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
 
-          <div className="icon-wrapper animate" data-sidebar-icon>
-            <ion-icon name="camera-sharp"></ion-icon>
+          <div className="icon-wrapper" data-sidebar-icon>
+            <p className="ion-icon">Show Contacts</p>
           </div>
         </button>
       </div>

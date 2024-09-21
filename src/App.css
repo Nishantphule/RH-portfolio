@@ -116,7 +116,7 @@ a { text-decoration: none; }
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, .ion-icon, a, button, time, span { display: block; }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
@@ -317,12 +317,12 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 140px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 425px; }
 
 .sidebar-info {
   position: relative;
@@ -1332,11 +1332,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 200px;
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 684px; }
 
   .sidebar-info { gap: 25px; }
 
@@ -1359,7 +1359,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: var(--fs-8);
   }
 
-  .info_more-btn ion-icon { display: none; }
+  .info_more-btn .ion-icon { display: none; }
 
   .separator { margin: 32px 0; }
 
