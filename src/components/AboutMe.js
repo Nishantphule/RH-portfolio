@@ -7,7 +7,7 @@ import fitnessLegacy from "../assets/images/fitnessLegacy.jpeg";
 import ather from "../assets/images/ather.png";
 import kardaCons from "../assets/images/kardaCons.jpeg";
 import avatar1 from "../assets/images/avatar-1.png";
-import avatar2 from "../assets/images/avatar-2.png";
+import myavatar1 from "../assets/images/my-avatar1.png";
 import avatar3 from "../assets/images/avatar-3.png";
 import avatar4 from "../assets/images/avatar-4.png";
 import iconApp from "../assets/images/icon-app.svg";
@@ -20,43 +20,55 @@ const AboutMe = ({ loading }) => {
   // Testimonials modal functionality
   useEffect(() => {
     if (!loading) {
-      const testimonialsItem = document.querySelectorAll(
+      const testimonialsItems = document.querySelectorAll(
         "[data-testimonials-item]"
       );
       const modalContainer = document.querySelector("[data-modal-container]");
       const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
       const overlay = document.querySelector("[data-overlay]");
+      const modalImg = document.querySelector("[data-modal-img]");
+      const modalTitle = document.querySelector("[data-modal-title]");
+      const modalText = document.querySelector("[data-modal-text]");
+      const modalDate = document.querySelector("[data-modal-date]"); // Date element in the modal
 
+      // Function to toggle the modal's visibility
       const testimonialsModalFunc = () => {
         modalContainer?.classList.toggle("active");
         overlay?.classList.toggle("active");
       };
 
-      testimonialsItem.forEach((item) => {
-        item.addEventListener("click", function () {
-          const modalImg = document.querySelector("[data-modal-img]");
-          const modalTitle = document.querySelector("[data-modal-title]");
-          const modalText = document.querySelector("[data-modal-text]");
+      // Click handler for opening the modal with correct content
+      const handleItemClick = function () {
+        modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+        modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+        modalTitle.innerHTML = this.querySelector(
+          "[data-testimonials-title]"
+        ).innerHTML;
+        modalText.innerHTML = this.querySelector(
+          "[data-testimonials-text]"
+        ).innerHTML;
 
-          modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-          modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-          modalTitle.innerHTML = this.querySelector(
-            "[data-testimonials-title]"
-          ).innerHTML;
-          modalText.innerHTML = this.querySelector(
-            "[data-testimonials-text]"
-          ).innerHTML;
+        // Set the date dynamically from the clicked testimonial
+        modalDate.innerHTML = this.querySelector(
+          "[data-testimonials-date]"
+        ).innerHTML;
 
-          testimonialsModalFunc();
-        });
+        testimonialsModalFunc();
+      };
+
+      // Add event listeners for each testimonial item
+      testimonialsItems.forEach((item) => {
+        item.addEventListener("click", handleItemClick);
       });
 
+      // Add event listeners for closing the modal
       modalCloseBtn?.addEventListener("click", testimonialsModalFunc);
       overlay?.addEventListener("click", testimonialsModalFunc);
 
+      // Cleanup function to remove all event listeners when the component unmounts or `loading` changes
       return () => {
-        testimonialsItem.forEach((item) => {
-          item.removeEventListener("click", testimonialsModalFunc);
+        testimonialsItems.forEach((item) => {
+          item.removeEventListener("click", handleItemClick);
         });
         modalCloseBtn?.removeEventListener("click", testimonialsModalFunc);
         overlay?.removeEventListener("click", testimonialsModalFunc);
@@ -188,6 +200,10 @@ const AboutMe = ({ loading }) => {
                   future projects.
                 </p>
               </div>
+
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
 
@@ -195,7 +211,7 @@ const AboutMe = ({ loading }) => {
             <div className="content-card" data-testimonials-item>
               <figure className="testimonials-avatar-box">
                 <img
-                  src={avatar2}
+                  src={avatar4}
                   alt="Devesh Karda"
                   width="60"
                   data-testimonials-avatar
@@ -222,6 +238,9 @@ const AboutMe = ({ loading }) => {
                   We look forward to future collaborations.
                 </p>
               </div>
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
 
@@ -229,7 +248,7 @@ const AboutMe = ({ loading }) => {
             <div className="content-card" data-testimonials-item>
               <figure className="testimonials-avatar-box">
                 <img
-                  src={avatar3}
+                  src={myavatar1}
                   alt="Parikshit shauche"
                   width="60"
                   data-testimonials-avatar
@@ -256,6 +275,9 @@ const AboutMe = ({ loading }) => {
                   forward to continuing our collaboration in the future.
                 </p>
               </div>
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
 
@@ -263,7 +285,7 @@ const AboutMe = ({ loading }) => {
             <div className="content-card" data-testimonials-item>
               <figure className="testimonials-avatar-box">
                 <img
-                  src={avatar3}
+                  src={avatar4}
                   alt="Habib Sayyed"
                   width="60"
                   data-testimonials-avatar
@@ -291,6 +313,9 @@ const AboutMe = ({ loading }) => {
                   work and look forward to more collaborations in the future.
                 </p>
               </div>
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
 
@@ -298,7 +323,7 @@ const AboutMe = ({ loading }) => {
             <div className="content-card" data-testimonials-item>
               <figure className="testimonials-avatar-box">
                 <img
-                  src={avatar4}
+                  src={avatar1}
                   alt="Bhavesh jain"
                   width="60"
                   data-testimonials-avatar
@@ -324,6 +349,9 @@ const AboutMe = ({ loading }) => {
                   together on future projects.
                 </p>
               </div>
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
 
@@ -331,7 +359,7 @@ const AboutMe = ({ loading }) => {
             <div className="content-card" data-testimonials-item>
               <figure className="testimonials-avatar-box">
                 <img
-                  src={avatar4}
+                  src={myavatar1}
                   alt="Kishor dusane"
                   width="60"
                   data-testimonials-avatar
@@ -357,6 +385,9 @@ const AboutMe = ({ loading }) => {
                   dedication and look forward to future collaborations.
                 </p>
               </div>
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
 
@@ -389,6 +420,9 @@ const AboutMe = ({ loading }) => {
                   on future projects.
                 </p>
               </div>
+              <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+                16 June, 2021
+              </time>
             </div>
           </li>
         </ul>
@@ -415,7 +449,7 @@ const AboutMe = ({ loading }) => {
               Daniel lewis
             </h4>
 
-            <time dateTime="2021-06-14">14 June, 2021</time>
+            <time dateTime="2021-06-14" data-modal-date></time>
 
             <div data-modal-text>
               <p>
@@ -426,6 +460,9 @@ const AboutMe = ({ loading }) => {
                 eiusmod tempor incididunt ut laborels dolore magnarels alia.
               </p>
             </div>
+            <time dateTime="2021-06-14" data-testimonials-date class="hidden">
+              16 June, 2021
+            </time>
           </div>
         </section>
       </div>

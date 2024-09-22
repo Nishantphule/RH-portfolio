@@ -307,7 +307,9 @@ main {
   min-width: 259px;
 }
 
-
+.hidden{
+  display: none;
+}
 
 
 

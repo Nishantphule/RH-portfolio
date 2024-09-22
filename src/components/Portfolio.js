@@ -11,6 +11,16 @@ import rhsolutionsLogo from "../assets/images/Designs/rhsolutions.jpg";
 import vrmLogo from "../assets/images/Designs/vrm.jpg";
 import vrmediaLogo from "../assets/images/Designs/vrmedia.JPG";
 
+import habib from "../assets/images/CC/habib.png";
+import fabric from "../assets/images/CC/fabric.png";
+import bnb from "../assets/images/CW/bnb.jpg";
+import bunmaska from "../assets/images/CW/bunmaska.jpg";
+import devasha from "../assets/images/CW/devasha.jpg";
+import dmora from "../assets/images/CW/dmora.jpg";
+import laTerreza from "../assets/images/CW/laTerreza.jpg";
+import marriot_strato from "../assets/images/CW/marriot_strato.jpg";
+import suvarna from "../assets/images/CW/suvarna.jpg";
+
 import img2102 from "../assets/images/Food/IMG_2102.HEIC";
 import img2107 from "../assets/images/Food/IMG_2107.HEIC";
 import img2182 from "../assets/images/Food/IMG_2182.HEIC";
@@ -576,6 +586,250 @@ const Portfolio = ({ loading }) => {
               {/* <h3 className="project-title"></h3> */}
 
               <p className="project-category">Food Photography</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="contents & cinematics"
+          >
+            <a
+              href="https://www.instagram.com/reel/C8pJjwXBzie/?igsh=dGZnOTAyNTZkaGlm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={habib} alt="contents & cinematics" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">A Story of Dreamer</h3>
+
+              <p className="project-category">Contents & Cinematics</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="contents & cinematics"
+          >
+            <a
+              href="https://www.instagram.com/reel/C-xbBsgMZlG/?igsh=MTZ3eXpweDEya2N2cQ%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src={fabric} alt="contents & cinematics" loading="lazy" />
+              </figure>
+
+              <h3 className="project-title">Fabric Lab Nashik</h3>
+
+              <p className="project-category">Contents & Cinematics</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/C9jyczGMmzf/?igsh=MXZmbWdiamtvcnR6eg=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={bnb}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">Bulls N Bears Cafe</h3>
+
+              <p className="project-category">Content Writing & Creation</p>
+            </a>
+          </li>
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/C-asZUKtJzJ/?igsh=M2VuYjVoY3dkcGRo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={bunmaska}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">Bun Maska Cafe</h3>
+
+              <p className="project-category">Content Writing & Creation</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/CwnfMj_LYlJ/?igsh=a2lwaTc4NWVneGV4"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={devasha}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">Devasha Electronics</h3>
+
+              <p className="project-category">Content Writing & Creation</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/C5GBNKXvqZl/?igsh=OXlkenhiejRkNHNu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={dmora}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">D'mora Cafe</h3>
+
+              <p className="project-category">Content Writing & Creation</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/C2hYKxDLfUS/?igsh=Y3J1d3o2Nm1zbXZz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={laTerreza}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">La' Terraza </h3>
+
+              <p className="project-category">Content Writing & Creation</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/C8uG36it44Z/?igsh=a2N6eWwzc2QwaWJ3"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={marriot_strato}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">Strato Marriot</h3>
+
+              <p className="project-category">Content Writing & Creation</p>
+            </a>
+          </li>
+
+          <li
+            className="project-item  active"
+            data-filter-item
+            data-category="content writing & creation"
+          >
+            <a
+              href="https://www.instagram.com/reel/CxxNsJKLObJ/?igsh=MXE0aTExZHVmbHpqcA==
+"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <figure className="project-img">
+                <div className="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img
+                  src={suvarna}
+                  alt="Content Writing & Creation"
+                  loading="lazy"
+                />
+              </figure>
+
+              <h3 className="project-title">Suvarnatirth Jewellers</h3>
+
+              <p className="project-category">Content Writing & Creation</p>
             </a>
           </li>
         </ul>
