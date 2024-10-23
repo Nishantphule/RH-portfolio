@@ -108,6 +108,21 @@ const AboutMe = ({ loading }) => {
         <h3 className="h3 service-title">What i'm doing</h3>
 
         <ul className="service-list">
+            <li className="service-item">
+            <div className="service-icon-box">
+              <img src={iconDesign} alt="design icon" width="40" />
+            </div>
+
+            <div className="service-content-box">
+              <h4 className="h4 service-item-title">UI / UX Designer</h4>
+
+              <p className="service-item-text">
+                The most modern and high-quality design made at a professional
+                level.
+              </p>
+            </div>
+          </li>
+            
           <li className="service-item">
             <div className="service-icon-box">
               <img src={iconDev} alt="Web development icon" width="40" />
@@ -146,21 +161,6 @@ const AboutMe = ({ loading }) => {
 
               <p className="service-item-text">
                 Can Visualize the scenarios into amazing videos.
-              </p>
-            </div>
-          </li>
-
-          <li className="service-item">
-            <div className="service-icon-box">
-              <img src={iconDesign} alt="design icon" width="40" />
-            </div>
-
-            <div className="service-content-box">
-              <h4 className="h4 service-item-title">Design</h4>
-
-              <p className="service-item-text">
-                The most modern and high-quality design made at a professional
-                level.
               </p>
             </div>
           </li>
